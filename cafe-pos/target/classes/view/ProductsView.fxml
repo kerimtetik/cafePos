@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cafe.ui.ProductsController">
+  <top>
+    <ToolBar>
+      <Label text="Ürünler" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+      <Pane HBox.hgrow="ALWAYS"/>
+      <Button text="Yenile" onAction="#onRefresh"/>
+    </ToolBar>
+  </top>
+  <center>
+    <TableView fx:id="table">
+      <columns>
+        <TableColumn fx:id="colName" text="Ürün" prefWidth="240"/>
+        <TableColumn fx:id="colPrice" text="Fiyat" prefWidth="120"/>
+        <TableColumn fx:id="colCategory" text="Kategori" prefWidth="160"/>
+      </columns>
+    </TableView>
+  </center>
+</BorderPane>

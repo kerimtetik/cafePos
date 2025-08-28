@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cafe.ui.POSController">
+  <left>
+    <VBox spacing="8" prefWidth="200" BorderPane.alignment="CENTER">
+      <Label text="Masalar" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+      <ListView fx:id="tableList" />
+      <Button text="Yeni Sipariş" onAction="#onNewOrder"/>
+    </VBox>
+  </left>
+
+  <center>
+    <VBox spacing="8">
+      <Label text="Ürünler" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+      <TableView fx:id="productTable">
+        <columns>
+          <TableColumn fx:id="pName" text="Ürün" prefWidth="240"/>
+          <TableColumn fx:id="pPrice" text="Fiyat" prefWidth="120"/>
+        </columns>
+      </TableView>
+      <Button text="Sepete Ekle" onAction="#onAddToCart"/>
+    </VBox>
+  </center>
+
+  <right>
+    <VBox spacing="8" prefWidth="280">
+      <Label text="Sepet" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+      <TableView fx:id="cartTable">
+        <columns>
+          <TableColumn fx:id="cProd" text="Ürün" prefWidth="140"/>
+          <TableColumn fx:id="cQty" text="Adet" prefWidth="60"/>
+          <TableColumn fx:id="cTotal" text="Tutar" prefWidth="80"/>
+        </columns>
+      </TableView>
+      <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Label text="Toplam:"/>
+        <Label fx:id="lblTotal" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+      </HBox>
+      <Button text="KDS'ye Gönder" onAction="#onSendToKitchen"/>
+    </VBox>
+  </right>
+</BorderPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cafe.ui.TablePlanController">
+
+    <!-- Sol Panel -->
+    <left>
+  <VBox spacing="10" alignment="TOP_CENTER" prefWidth="200" style="-fx-padding: 10;">
+    <Label text="Süre" style="-fx-font-weight: bold;"/>
+    <Label fx:id="lblTime" text="00:00"/>
+
+    <Separator/>
+
+    <Label text="Masa İçeriği" style="-fx-font-weight: bold;"/>
+    <Label fx:id="lblSelectedTable" text="Seçili masa: -"/>
+    <ListView fx:id="orderList" prefHeight="240"/>
+
+    <!-- liste kontrol butonları -->
+    <HBox spacing="6" alignment="CENTER">
+      <Button text="Ürün Ekle" onAction="#onAddProductToTable"/>
+      <Button text="+" onAction="#onIncreaseQty"/>
+      <Button text="-" onAction="#onDecreaseQty"/>
+      <Button text="Sil" onAction="#onDeleteItem"/>
+    </HBox>
+
+    <Separator/>
+
+    <Button text="Yazdır" onAction="#onPrint"/>
+    <Label text="Toplam Hesap" style="-fx-font-weight: bold;"/>
+    <Label fx:id="lblTotal" text="0.00 TL" style="-fx-font-size: 14;"/>
+  </VBox>
+</left>
+
+    <!-- Üst Panel -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Button text="Masa Ekle" onAction="#onAddTable"/>
+            <Button text="Ürün Ekle" onAction="#onAddProduct"/>
+        </HBox>
+    </top>
+
+    <!-- Orta Alan (Masa Planı) -->
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Ön Taraf">
+                <AnchorPane fx:id="frontArea" />
+            </Tab>
+            <Tab text="Arka Taraf">
+                <AnchorPane fx:id="backArea" />
+            </Tab>
+            <Tab text="Teras">
+                <AnchorPane fx:id="terraceArea" />
+            </Tab>
+        </TabPane>
+    </center>
+
+</BorderPane>

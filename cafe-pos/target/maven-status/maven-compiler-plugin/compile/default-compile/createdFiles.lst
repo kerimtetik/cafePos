@@ -1,0 +1,8 @@
+com\cafe\domain\Product.class
+com\cafe\domain\Category.class
+com\cafe\ui\ProductsController.class
+com\cafe\Boot.class
+com\cafe\persistence\JPAUtil.class
+com\cafe\MainApp.class
+com\cafe\repo\ProductRepository.class
+com\cafe\ui\TablePlanController$1.class

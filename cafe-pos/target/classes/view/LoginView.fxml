@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.LoginController"
+      alignment="CENTER" spacing="12">
+  <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
+
+  <Label text="Kafe Sipariş - Giriş" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+  <TextField fx:id="username" promptText="Kullanıcı"/>
+  <PasswordField fx:id="pin" promptText="PIN"/>
+  <Button text="Giriş" onAction="#onLogin" maxWidth="160"/>
+</VBox>
