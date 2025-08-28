@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml">
+  <top><Label text="Siparişler" style="-fx-padding:10; -fx-text-fill:#e5e7eb; -fx-font-size:18;"/></top>
+  <center><Label text="Sipariş listesi burada..." style="-fx-text-fill:#94a3b8;"/></center>
+</BorderPane>

@@ -6,15 +6,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class MainApp extends Application {
 	
   @Override
   public void start(Stage stage) throws Exception {
 	Boot.migrate(); // DB şemasını ayağa kaldır
-    Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
-    stage.setTitle("Kafe Sipariş");
-    stage.setScene(new Scene(root, 1000, 640));
+	
+	// var yerine Parent kullan
+    Parent root = FXMLLoader.load(getClass().getResource("/view/DashboardView.fxml"));
+    stage.setScene(new Scene(root, 1280, 780));
+    stage.setTitle("Cafe Otomasyon — Dashboard");
+    
     stage.show();
+    
   }
   public static void main(String[] args) { launch(args); }
 }

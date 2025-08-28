@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER" spacing="14" style="-fx-padding:24;">
+  <Label text="Hoş geldiniz!" style="-fx-text-fill:#e5e7eb; -fx-font-size:22; -fx-font-weight:bold;"/>
+  <Label text="Soldaki menüden modül seçin veya 'Masalar' ile başlayın."
+         style="-fx-text-fill:#94a3b8;"/>
+</VBox>

@@ -10,6 +10,7 @@ C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\domain\Product.
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\MainApp.java
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\persistence\JPAUtil.java
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\repo\ProductRepository.java
+C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\ui\DashboardController.java
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\ui\LoginController.java
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\ui\POSController.java
 C:\Users\kerim\eclipse-workspace\cafe-pos\src\main\java\com\cafe\ui\ProductsController.java

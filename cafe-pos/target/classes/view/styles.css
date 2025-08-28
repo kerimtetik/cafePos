@@ -1,0 +1,9 @@
+.root { -fx-font-size: 14px; }
+.button.nav-btn {
+  -fx-background-color: #1f2937;
+  -fx-text-fill: #e5e7eb;
+  -fx-alignment: CENTER_LEFT;
+}
+.button.nav-btn:hover { -fx-background-color: #374151; }
+.button.nav-btn:pressed { -fx-background-color: #4b5563; }
+.label { -fx-text-fill: #e5e7eb; }

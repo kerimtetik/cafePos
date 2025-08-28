@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cafe.ui.DashboardController"
+            prefWidth="1280" prefHeight="780"
+            stylesheets="@/view/styles.css">
+
+  <!-- Üst bar -->
+  <top>
+    <HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding:10; -fx-background-color:#0f172a; -fx-text-fill:white;">
+      <Label text="☕ Cafe Otomasyon" style="-fx-text-fill:white; -fx-font-size:18; -fx-font-weight:bold;"/>
+      <Pane HBox.hgrow="ALWAYS"/>
+      <Label fx:id="lblUser" text="Kullanıcı: admin" style="-fx-text-fill:#e2e8f0;"/>
+      <Separator orientation="VERTICAL"/>
+      <Label fx:id="lblClock" text="00:00" style="-fx-text-fill:#e2e8f0;"/>
+    </HBox>
+  </top>
+
+  <!-- Sol menü -->
+  <left>
+    <VBox spacing="6" style="-fx-padding:12; -fx-background-color:#111827;" prefWidth="220">
+      <Label text="Menü" style="-fx-text-fill:#a1a1aa; -fx-font-size:12;"/>
+      <Button text="🏠  Dashboard"            onAction="#openDashboard"   maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="🪑  Masalar"               onAction="#openTables"      maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="🧾  Siparişler"            onAction="#openOrders"      maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="📦  Ürün / Stok"           onAction="#openProducts"    maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="📊  Raporlar"              onAction="#openReports"     maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="👥  Müşteriler / Üyelik"   onAction="#openCustomers"   maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="🔑  Kullanıcılar"          onAction="#openUsers"       maxWidth="Infinity" styleClass="nav-btn"/>
+      <Button text="⚙️  Ayarlar"               onAction="#openSettings"    maxWidth="Infinity" styleClass="nav-btn"/>
+      <Pane VBox.vgrow="ALWAYS"/>
+      <Button text="⏻  Çıkış" onAction="#logout" maxWidth="Infinity" style="-fx-background-color:#ef4444; -fx-text-fill:white;"/>
+    </VBox>
+  </left>
+
+  <!-- Orta içerik -->
+  <center>
+    <StackPane fx:id="content" style="-fx-background-color:#0b1020;">
+      <!-- yüklenen modüller buraya gelecek -->
+    </StackPane>
+  </center>
+
+  <!-- Alt durum çubuğu -->
+  <bottom>
+    <HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding:8; -fx-background-color:#0b1020; -fx-text-fill:#94a3b8;">
+      <Label text="Sunucu: LOCAL"/>
+      <Separator orientation="VERTICAL"/>
+      <Label fx:id="lblStatus" text="Hazır"/>
+    </HBox>
+  </bottom>
+
+
+</BorderPane>

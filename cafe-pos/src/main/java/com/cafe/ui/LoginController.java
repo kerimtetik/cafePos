@@ -19,9 +19,10 @@ public class LoginController {
       Stage stage = (Stage) ((javafx.scene.Node)e.getSource()).getScene().getWindow();
 
       // var yerine Parent kullan
-      Parent root = FXMLLoader.load(getClass().getResource("/view/TablePlanView.fxml"));
-      stage.setScene(new Scene(root, 1200, 700));
-      stage.setTitle("Table Plan");
+      Parent root = FXMLLoader.load(getClass().getResource("/view/DashboardView.fxml"));
+      stage.setScene(new Scene(root, 1280, 780));
+      stage.setTitle("Cafe Otomasyon — Dashboard");
+
     } catch (Exception ex) {
       ex.printStackTrace();
     }
